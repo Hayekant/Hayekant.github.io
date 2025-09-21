@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Hayekant</title><meta name="author" content="Hayekant"><meta name="copyright" content="Hayekant"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="未经省察的人生的不值得过">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hayekant">
+<meta property="og:url" content="https://www.hayekant.cc/index.html">
+<meta property="og:site_name" content="Hayekant">
+<meta property="og:description" content="未经省察的人生的不值得过">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.hayekant.cc/image/profile-photo.jpg">
+<meta property="article:author" content="Hayekant">
+<meta property="article:tag" content="编程,投资,哲学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.hayekant.cc/image/profile-photo.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hayekant",
+  "alternateName": [
+    "www.hayekant.cc"
+  ],
+  "url": "https://www.hayekant.cc/"
+}</script><link rel="shortcut icon" href="/image/favicon.jpg"><link rel="canonical" href="https://www.hayekant.cc/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hayekant',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.0.0"></head><body><div id="web_bg" style="background-image: url(/image/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/image/profile-photo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/image/background.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Hayekant</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Hayekant</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/Hayekant" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292F;"></i></a><a class="social-icon" href="mailto:kant-hayek@proton.me" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #66B2FF;"></i></a><a class="social-icon" href="https://www.douban.com/people/library2022" target="_blank" title="Douban"><i class="fa-solid fa-heart" style="color: #1DA1F2;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover"><a href="/2025/09/21/2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%B1%85%E6%B0%91%E6%9C%80%E5%90%8E%E5%94%AF%E4%B8%80%E5%85%A8%E7%A8%8B%E7%BA%BF%E4%B8%8A%E5%BC%80%E9%80%9A%E7%BE%8E%E8%82%A1%E8%B4%A6%E6%88%B7%E5%B9%B6%E4%B8%94%E8%B7%91%E9%80%9A%E5%87%BA%E5%85%A5%E9%87%91%E6%B5%81%E7%A8%8B%E7%9A%84%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程"><img class="post-bg" src="https://s2.loli.net/2025/09/21/pBXd3gQ1nykzqt2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/09/21/2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%B1%85%E6%B0%91%E6%9C%80%E5%90%8E%E5%94%AF%E4%B8%80%E5%85%A8%E7%A8%8B%E7%BA%BF%E4%B8%8A%E5%BC%80%E9%80%9A%E7%BE%8E%E8%82%A1%E8%B4%A6%E6%88%B7%E5%B9%B6%E4%B8%94%E8%B7%91%E9%80%9A%E5%87%BA%E5%85%A5%E9%87%91%E6%B5%81%E7%A8%8B%E7%9A%84%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程">2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-21T13:00:00.000Z" title="发表于 2025-09-21 13:00:00">2025-09-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%B7%A8%E5%A2%83%E5%87%BA%E6%B5%B7/">跨境出海</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BE%8E%E8%82%A1/">美股</a></span></div><div class="content">前言本文的主要内容是介绍目前中国大陆境内居民足不出户即可拥有美股账户并且可以出入金的唯一方法,尽管这条路径总体来看不如去香港开通银行账户完美，但胜在无需亲自去往海外办理当地银行账户而且可以迅速跑通美股账户从开户，入金到出金的全过程。 强烈建议先从头到尾阅读完本文，再开始严格按照教程进行操作。本教程理论上绝对可行，实操上尽管比较繁琐，但跟着教程操作可以极大减少整个过程中的差错和损耗。 本文最重要的图表 本文的所有内容都是对这副图表的说明和补充 一.英镑路线由于这条路线的起始币种必须是英镑，因此命名为英镑路线。 必备材料 开通兴业寰宇人生借记卡。如果目前还没有开通兴业寰宇人生借记卡I类账户，可以根据这篇文章兴业银行“寰宇人生”借记卡线上申请保姆级教程按照流程申请。  开通英国iFast银行账户。如果目前还没有开通英国iFast银行账户，可以根据这篇文章2025年最新iFast Global开户注册及入金验证保姆级教程按照流程申请。  开通Wise银行账户。如果目前还没有开通Wise银行账户，可以根据这篇文章全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南按...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/09/21/%E5%85%A8%E7%90%83%E6%B1%87%E6%AC%BE%E7%A5%9E%E5%99%A8Wise%E5%BC%80%E6%88%B7%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B%EF%BC%9A%E4%BB%8E%E6%B3%A8%E5%86%8C%E3%80%81%E9%AA%8C%E8%AF%81%E5%88%B0%E5%85%A5%E9%87%91%E7%9A%84%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8A%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97/" title="全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南"><img class="post-bg" src="https://s2.loli.net/2025/09/21/iR7xXd3lOVWwqGD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/09/21/%E5%85%A8%E7%90%83%E6%B1%87%E6%AC%BE%E7%A5%9E%E5%99%A8Wise%E5%BC%80%E6%88%B7%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B%EF%BC%9A%E4%BB%8E%E6%B3%A8%E5%86%8C%E3%80%81%E9%AA%8C%E8%AF%81%E5%88%B0%E5%85%A5%E9%87%91%E7%9A%84%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8A%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97/" title="全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南">全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-21T09:00:00.000Z" title="发表于 2025-09-21 09:00:00">2025-09-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%B7%A8%E5%A2%83%E5%87%BA%E6%B5%B7/">跨境出海</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BE%8E%E8%82%A1/">美股</a></span></div><div class="content">前言✅ 核心优势   优势方面 传统银行或平台典型情况 Wise 典型情况 核心优势总结    💸 费用与汇率 手续费高（如$25-50&#x2F;笔），汇率加价（通常 1%-3%） 仅收一笔手续费（约 0.33%-0.7%），汇率采用真实市场中间价，无隐藏加价 费用显著更低，汇率完全透明   ⚡ 到账速度 通常需要 2-5 个工作日（通过 SWIFT 网络） 约50%的汇款即时到账，90%在24小时内完成 利用本地银行网络，速度更快   🌍 覆盖范围 支持货币和国家有限，到账方式单一 支持 50+ 种货币，覆盖 70+ 国家和地区，可汇款至支付宝、微信 覆盖更广，收款方式更灵活，对中国用户友好   🔒 安全与合规 受各地金融监管机构监管 在全球主要运营地均受权威监管（如英国FCA、美国FinCEN等），用户资金存放于隔离账户 合规性和安全性有保障   📱 便捷与功能 操作流程复杂，额外功能较少 多币种账户：持有管理50多种货币  借记卡：全球消费取现((大中华区暂不提供借记卡)  企业服务：跨境解决方案 提供超越简单汇款的综合货币管理工具    一、注册前准备必需材料清...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/09/14/2025%E5%B9%B4%E6%9C%80%E6%96%B0%E2%80%8BiFast%20Global%E5%BC%80%E6%88%B7%E6%B3%A8%E5%86%8C%E5%8F%8A%E5%85%A5%E9%87%91%E9%AA%8C%E8%AF%81%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年最新​iFast Global开户注册及入金验证保姆级教程"><img class="post-bg" src="https://s2.loli.net/2025/09/14/u3rHRGfb7ZiM6la.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年最新​iFast Global开户注册及入金验证保姆级教程"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/09/14/2025%E5%B9%B4%E6%9C%80%E6%96%B0%E2%80%8BiFast%20Global%E5%BC%80%E6%88%B7%E6%B3%A8%E5%86%8C%E5%8F%8A%E5%85%A5%E9%87%91%E9%AA%8C%E8%AF%81%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年最新​iFast Global开户注册及入金验证保姆级教程">2025年最新​iFast Global开户注册及入金验证保姆级教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-14T10:30:00.000Z" title="发表于 2025-09-14 10:30:00">2025-09-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%B7%A8%E5%A2%83%E5%87%BA%E6%B5%B7/">跨境出海</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BE%8E%E8%82%A1/">美股</a></span></div><div class="content">前言随着境外银行账户审核政策持续收紧，此前备受青睐的可全程在线申请的新加坡OCBC华侨银行账户，目前已不允许内地用户云开户，并且此前的存量用户也不得不因政策而被迫清退。 此前曾提到的香港数字银行ZA Bank尽管开户十分便捷，但也仍然需要申请人开户时身处香港境内，iFast Global却是少数支持内地用户全程线上开户的境外数字银行，足不出户就可以便捷开通全球资产配置的入口。 iFAST Global Bank(奕丰环球银行)是英国持牌数字银行，隶属于新加坡上市公司iFAST Corporation，受英国审慎监管局（PRA）和金融行为监管局（FCA）监管，并受FSCS存款保障（最高£85,000）保护。 iFAST Global Bank提供多币种账户服务，支持包括英镑、欧元、美元、港币、新加坡元及人民币在内的多种货币。新用户成功开户后，将获得一个英国的国际银行账户号码（IBAN），用户可以在英国乃至全球范围内进行安全、便捷的国际转账与收款。 开户核心准备材料   材料类型 要求说明 有效证明样例（✅） 无效证明样例（❌）    身份证明 有效期内的清晰彩色扫描件或照片 身份证...</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/04/06/%E5%85%B3%E7%A8%8E%EF%BC%8C%E4%B8%AD%E5%80%BA%E4%BB%A5%E5%8F%8A%E7%BE%8E%E8%82%A1/" title="关税，中债以及美股"><img class="post-bg" src="https://pub-b6ccc329e02747e0bd431ae6829ef077.r2.dev/2025/04/563239e78e8edcec287ef1813d0dde7f.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关税，中债以及美股"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/04/06/%E5%85%B3%E7%A8%8E%EF%BC%8C%E4%B8%AD%E5%80%BA%E4%BB%A5%E5%8F%8A%E7%BE%8E%E8%82%A1/" title="关税，中债以及美股">关税，中债以及美股</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-06T00:00:00.000Z" title="发表于 2025-04-06 00:00:00">2025-04-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%95%E8%B5%84/">投资</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BE%8E%E8%82%A1/">美股</a></span></div><div class="content">静待关税政策落地</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/03/24/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9F/" title="如何理解特朗普"><img class="post-bg" src="https://raw.githubusercontent.com/Hayekant/Image/main/2025.3.24特朗普文章主图" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何理解特朗普"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/24/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9F/" title="如何理解特朗普">如何理解特朗普</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-24T00:00:00.000Z" title="发表于 2025-03-24 00:00:00">2025-03-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%95%E8%B5%84/">投资</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%89%B9%E6%9C%97%E6%99%AE/">特朗普</a></span></div><div class="content">特朗普究其本质是个重商主义者</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/03/24/%E6%80%8E%E4%B9%88%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9A%84%E7%BE%8E%E8%82%A1/" title="怎么看当前的美股"><img class="post-bg" src="https://raw.githubusercontent.com/Hayekant/Image/main/2025.3.24美股博客文章主图" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="怎么看当前的美股"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/24/%E6%80%8E%E4%B9%88%E7%9C%8B%E5%BD%93%E5%89%8D%E7%9A%84%E7%BE%8E%E8%82%A1/" title="怎么看当前的美股">怎么看当前的美股</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-24T00:00:00.000Z" title="发表于 2025-03-24 00:00:00">2025-03-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%8A%95%E8%B5%84/">投资</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%BE%8E%E8%82%A1/">美股</a></span></div><div class="content">美股目前看反弹</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/03/24/%E9%9D%92%E5%B9%B4%E5%A4%9A%E5%B0%91%E4%BB%A3%E4%BB%B7%E4%BB%A5%E6%B1%9D%E4%B8%BA%E5%90%8D%EF%BC%9F/" title="青年，多少代价以汝为名？"><img class="post-bg" src="/image/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="青年，多少代价以汝为名？"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/24/%E9%9D%92%E5%B9%B4%E5%A4%9A%E5%B0%91%E4%BB%A3%E4%BB%B7%E4%BB%A5%E6%B1%9D%E4%B8%BA%E5%90%8D%EF%BC%9F/" title="青年，多少代价以汝为名？">青年，多少代价以汝为名？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-24T00:00:00.000Z" title="发表于 2025-03-24 00:00:00">2025-03-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E7%BB%8F%E6%B5%8E/">经济</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E/">中国经济</a></span></div><div class="content">一篇非常久远的文章</div></div></div><div class="recent-post-item"><div class="post_cover"><a href="/2025/03/23/%E7%99%BD%E9%B9%BF%E5%8E%9F%E4%B8%8A%E5%86%8D%E6%97%A0%E7%99%BD%E9%B9%BF/" title="白鹿原上再无白鹿"><img class="post-bg" src="https://raw.githubusercontent.com/Hayekant/Image/main/白鹿原博客文章主图" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="白鹿原上再无白鹿"></a></div><div class="recent-post-info"><a class="article-title" href="/2025/03/23/%E7%99%BD%E9%B9%BF%E5%8E%9F%E4%B8%8A%E5%86%8D%E6%97%A0%E7%99%BD%E9%B9%BF/" title="白鹿原上再无白鹿">白鹿原上再无白鹿</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-03-23T00:00:00.000Z" title="发表于 2025-03-23 00:00:00">2025-03-23</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%96%87%E5%AD%A6/">文学</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%99%BD%E9%B9%BF%E5%8E%9F/">白鹿原</a></span></div><div class="content">《白鹿原》随笔</div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/image/profile-photo.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Hayekant</div><div class="author-info-description">未经省察的人生的不值得过</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Hayekant"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/Hayekant" target="_blank" title="GitHub"><i class="fab fa-github" style="color: #24292F;"></i></a><a class="social-icon" href="mailto:kant-hayek@proton.me" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #66B2FF;"></i></a><a class="social-icon" href="https://www.douban.com/people/library2022" target="_blank" title="Douban"><i class="fa-solid fa-heart" style="color: #1DA1F2;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">大家好，欢迎来到我的世界。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/09/21/2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%B1%85%E6%B0%91%E6%9C%80%E5%90%8E%E5%94%AF%E4%B8%80%E5%85%A8%E7%A8%8B%E7%BA%BF%E4%B8%8A%E5%BC%80%E9%80%9A%E7%BE%8E%E8%82%A1%E8%B4%A6%E6%88%B7%E5%B9%B6%E4%B8%94%E8%B7%91%E9%80%9A%E5%87%BA%E5%85%A5%E9%87%91%E6%B5%81%E7%A8%8B%E7%9A%84%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程"><img src="https://s2.loli.net/2025/09/21/pBXd3gQ1nykzqt2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程"/></a><div class="content"><a class="title" href="/2025/09/21/2025%E5%B9%B4%E4%B8%AD%E5%9B%BD%E5%A4%A7%E9%99%86%E5%B1%85%E6%B0%91%E6%9C%80%E5%90%8E%E5%94%AF%E4%B8%80%E5%85%A8%E7%A8%8B%E7%BA%BF%E4%B8%8A%E5%BC%80%E9%80%9A%E7%BE%8E%E8%82%A1%E8%B4%A6%E6%88%B7%E5%B9%B6%E4%B8%94%E8%B7%91%E9%80%9A%E5%87%BA%E5%85%A5%E9%87%91%E6%B5%81%E7%A8%8B%E7%9A%84%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程">2025年中国大陆居民最后唯一全程线上开通美股账户并且跑通出入金流程的保姆级教程</a><time datetime="2025-09-21T13:00:00.000Z" title="发表于 2025-09-21 13:00:00">2025-09-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/21/%E5%85%A8%E7%90%83%E6%B1%87%E6%AC%BE%E7%A5%9E%E5%99%A8Wise%E5%BC%80%E6%88%B7%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B%EF%BC%9A%E4%BB%8E%E6%B3%A8%E5%86%8C%E3%80%81%E9%AA%8C%E8%AF%81%E5%88%B0%E5%85%A5%E9%87%91%E7%9A%84%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8A%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97/" title="全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南"><img src="https://s2.loli.net/2025/09/21/iR7xXd3lOVWwqGD.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南"/></a><div class="content"><a class="title" href="/2025/09/21/%E5%85%A8%E7%90%83%E6%B1%87%E6%AC%BE%E7%A5%9E%E5%99%A8Wise%E5%BC%80%E6%88%B7%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B%EF%BC%9A%E4%BB%8E%E6%B3%A8%E5%86%8C%E3%80%81%E9%AA%8C%E8%AF%81%E5%88%B0%E5%85%A5%E9%87%91%E7%9A%84%E8%AF%A6%E7%BB%86%E6%AD%A5%E9%AA%A4%E4%BB%A5%E5%8F%8A%E9%81%BF%E5%9D%91%E6%8C%87%E5%8D%97/" title="全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南">全球汇款神器Wise开户保姆级教程：从注册、验证到入金的详细步骤以及避坑指南</a><time datetime="2025-09-21T09:00:00.000Z" title="发表于 2025-09-21 09:00:00">2025-09-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/14/2025%E5%B9%B4%E6%9C%80%E6%96%B0%E2%80%8BiFast%20Global%E5%BC%80%E6%88%B7%E6%B3%A8%E5%86%8C%E5%8F%8A%E5%85%A5%E9%87%91%E9%AA%8C%E8%AF%81%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年最新​iFast Global开户注册及入金验证保姆级教程"><img src="https://s2.loli.net/2025/09/14/u3rHRGfb7ZiM6la.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025年最新​iFast Global开户注册及入金验证保姆级教程"/></a><div class="content"><a class="title" href="/2025/09/14/2025%E5%B9%B4%E6%9C%80%E6%96%B0%E2%80%8BiFast%20Global%E5%BC%80%E6%88%B7%E6%B3%A8%E5%86%8C%E5%8F%8A%E5%85%A5%E9%87%91%E9%AA%8C%E8%AF%81%E4%BF%9D%E5%A7%86%E7%BA%A7%E6%95%99%E7%A8%8B/" title="2025年最新​iFast Global开户注册及入金验证保姆级教程">2025年最新​iFast Global开户注册及入金验证保姆级教程</a><time datetime="2025-09-14T10:30:00.000Z" title="发表于 2025-09-14 10:30:00">2025-09-14</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/04/06/%E5%85%B3%E7%A8%8E%EF%BC%8C%E4%B8%AD%E5%80%BA%E4%BB%A5%E5%8F%8A%E7%BE%8E%E8%82%A1/" title="关税，中债以及美股"><img src="https://pub-b6ccc329e02747e0bd431ae6829ef077.r2.dev/2025/04/563239e78e8edcec287ef1813d0dde7f.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="关税，中债以及美股"/></a><div class="content"><a class="title" href="/2025/04/06/%E5%85%B3%E7%A8%8E%EF%BC%8C%E4%B8%AD%E5%80%BA%E4%BB%A5%E5%8F%8A%E7%BE%8E%E8%82%A1/" title="关税，中债以及美股">关税，中债以及美股</a><time datetime="2025-04-06T00:00:00.000Z" title="发表于 2025-04-06 00:00:00">2025-04-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/03/24/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9F/" title="如何理解特朗普"><img src="https://raw.githubusercontent.com/Hayekant/Image/main/2025.3.24特朗普文章主图" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何理解特朗普"/></a><div class="content"><a class="title" href="/2025/03/24/%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E7%89%B9%E6%9C%97%E6%99%AE%EF%BC%9F/" title="如何理解特朗普">如何理解特朗普</a><time datetime="2025-03-24T00:00:00.000Z" title="发表于 2025-03-24 00:00:00">2025-03-24</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%8A%95%E8%B5%84/"><span class="card-category-list-name">投资</span><span class="card-category-list-count">3</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%96%87%E5%AD%A6/"><span class="card-category-list-name">文学</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E7%BB%8F%E6%B5%8E/"><span class="card-category-list-name">经济</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E8%B7%A8%E5%A2%83%E5%87%BA%E6%B5%B7/"><span class="card-category-list-name">跨境出海</span><span class="card-category-list-count">3</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E7%BE%8E%E8%82%A1/" style="font-size: 1.5em; color: #99a9bf">美股</a> <a href="/tags/%E7%89%B9%E6%9C%97%E6%99%AE/" style="font-size: 1.1em; color: #999">特朗普</a> <a href="/tags/%E7%99%BD%E9%B9%BF%E5%8E%9F/" style="font-size: 1.1em; color: #999">白鹿原</a> <a href="/tags/%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E/" style="font-size: 1.1em; color: #999">中国经济</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/09/">
+            <span class="card-archive-list-date">
+              九月 2025
+            </span>
+            <span class="card-archive-list-count">3</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/03/">
+            <span class="card-archive-list-date">
+              三月 2025
+            </span>
+            <span class="card-archive-list-count">4</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">8</div></div><div class="webinfo-item"><div class="item-name">本站总字数 :</div><div class="item-count">15.4k</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-09-21T05:34:25.064Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/image/background.jpg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Hayekant</span></div><div class="footer_custom_text">怕什么真理无穷，进一寸有一寸的欢喜</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["谁终将声震人间，必长久深自缄默","谁终将点燃闪电，必长久如云漂泊"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["谁终将声震人间，必长久深自缄默","谁终将点燃闪电，必长久如云漂泊"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
